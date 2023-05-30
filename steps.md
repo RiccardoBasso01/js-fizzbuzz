@@ -13,3 +13,8 @@ Per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz” al posto 
     - SE il numero è multiplo di 5 scrivo "BUZZ"
     - SE il numero è multiplo di entrambi scrivo "FIZZBUZZ"
     - ALTRIMENTI scrivo il numero
+
+---
+
+># BONUS
+Crea un gioco in cui l'utente dovrà capire se le caselle con bordo rosso sono "fizz" "buzz" o "fizzbuzz". Il giocatore cliccando sulle caselle potrà inserire il valore che crede giusto, se indovina, le caselle vengono colorate, un avolta completate tutte apparirà la coppa.
