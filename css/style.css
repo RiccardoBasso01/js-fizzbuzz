@@ -6,25 +6,73 @@
 
 /* FUNZIONALITÀ */
 :root{
-    --header-bgc: white;
-    --button-bgc-blue: #0061fe;
-    --light-blue:#b4d0e7;
-    --bgc-hover-button-blue: #5d9bff;
-    --bgc-hover-nav: #eee9e2;
-    --p-15: 15px;
-    --p-col: 10px;
-    --font-size-s:0.6rem;
-    --font-size-m:0.8rem;
-    --font-size-l:1.5rem;
-    --font-size-xl:2rem;
-    --font-size-xxl:3.5rem;
-    --font-size-xxxl:5rem;
-    --card-space: 2px;
-    --center: 1400px;
-    --gap-card: 10px;
-    --f-height: 70px;
-    --h-height: 50px;
-    --color-card: #ec407a;
-    --light-grey: #cdcdcd;
-    --g-20: 20px
+    --font-size-l: 3rem;
+
+    --orange-1: #d8b802;
+    --orange-2: #f29400;
+    --orange-3: rgb(185, 86, 0);
+
+    --light-gray: rgb(150,150,150);
+
+    --square: 70px
+}
+
+/************************** effetti *********************************/
+#element div:hover{
+    cursor: pointer;
+    background-color: rgb(255, 0, 0);
+}
+
+/*********************************************************************/
+.wrapper{
+    background-color: black;
+    padding: 30px;
+}
+
+h1{
+    text-align: center;
+    color: #f29400;
+    font-size: var(--font-size-l);
+    margin-bottom: 50px;
+}
+
+#element{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#element div{
+    width: var(--square);
+    height: var(--square);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid black;
+    border-radius: 50%;
+
+    font-weight: 700;
+
+    background-color: var(--bs-gray-300);
+}
+
+#element .FizzBuzz{
+    background-color: var(--orange-3);
+    color: white;
+
+}
+
+#element .Fizz{
+    background-color: var(--orange-1);
+    color: white;
+
+}
+
+#element .Buzz{
+    background-color: var(--orange-2);
+    color: white;
+
 }
