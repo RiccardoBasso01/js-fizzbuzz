@@ -1,0 +1,147 @@
+/* File dedicato alla struttura del sito */
+:root{
+    /* Colore primario */
+    --primario: #c58af9;
+    /* Colore secondario */
+    --secondario: #ff8300;
+    /* Colore terziario */
+    --terziario:#009aff;
+}
+/* ? Se si vuole aggiungere un componente assicurarsi di aggiungerlo nella giusta sezione in tutti i 3 passaggi */
+/* ! Passaggio 1: aggiungere un bordo */
+/* Bordi sezioni principali; Header, Main, Footer */
+header, main, footer{
+    border: 5px solid var(--primario);
+    position: relative;
+}
+
+/* Bordi sezioni secondarie; Sidebar, header secondari ecc... */
+.sidebar{
+    border: 3px solid var(--secondario);
+    position: relative;
+}
+
+/* Bordi contenuti terziari; card, div ecc.. */
+.card{
+    border: 3px dashed var(--terziario);
+    position: relative;
+}
+
+/* ! Passaggio 2: aggiungere un titolo */
+/* Titolo del contenuto */
+/* Componenti primari */
+header::after,
+main::after,
+footer::after{
+    font-size: 2rem;
+    color: var(--primario);
+    background-color: rgb(58, 58, 58);
+    border-radius: 20px;
+    padding: 10px;
+    max-height: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+header::after{
+    content: 'HEADER';
+}
+
+main::after{
+    content: 'MAIN';
+}
+
+footer::after{
+    content: 'FOOTER';
+}
+
+/* Componenti secondari */
+.sidebar::after{
+    font-size: 1.5rem;
+    color: var(--secondario);
+    background-color: rgb(58, 58, 58);
+    border-radius: 20px;
+    padding: 5px;
+    max-height: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    z-index: 2;
+}
+
+.sidebar::after{
+    content: 'SIDEBAR';
+}
+
+/* Componenti terziari */
+.card::after{
+    font-size: 1rem;
+    color: var(--terziario);
+    background-color: rgb(58, 58, 58);
+    border-radius: 20px;
+    padding: 10px;
+    max-height: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.card::after{
+    content: 'Cont.';
+}
+
+/* ! Passaggio 3: aggiungere la linea */
+/* Linee di delimitazione area sezione */
+/* Contenuti principali */
+header::before,
+main::before,
+footer::before{
+    content: '';
+    border: 5px solid var(--primario);
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
+}
+
+/* Contenuti secondari */
+.sidebar::before{
+    content: '';
+    border: 2px dashed var(--secondario);
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
+}
+
+
+/* Contenuti terziari */
+.card::before{
+    content: '';
+    border: 2px dotted var(--terziario);
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
+}
