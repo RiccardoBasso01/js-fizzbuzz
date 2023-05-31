@@ -9,6 +9,7 @@ let x = 0;
 const element = document.getElementById('element');
 console.log(element);
 const wrapper = document.getElementById('wrapper');
+let counter = document.getElementById('counter');
 
 
 //Generare numeri da 1 a 100 assegnando la giusta classe in base alle casistiche
@@ -75,6 +76,7 @@ for (let i = 0; i < cell.length; i++) {
                 wrapper.classList.add('winner');
             }
         console.log(x) //Visualizza il contatore in console
+        counter.innerText =  x + ' ';  //Visualizza il contatore in pagina
         
         //!Se non passa la verifica esce un alert di errore
         } else {
